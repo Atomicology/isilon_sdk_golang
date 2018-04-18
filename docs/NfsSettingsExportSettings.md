@@ -1,0 +1,51 @@
+# NfsSettingsExportSettings
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**AllDirs** | **bool** | True if all directories under the specified paths are mountable. | [optional] [default to null]
+**BlockSize** | **int32** | Specifies the block size returned by the NFS statfs procedure. | [optional] [default to null]
+**CanSetTime** | **bool** | True if the client can set file times through the NFS set attribute request. This parameter does not affect server behavior, but is included to accommoate legacy client requirements. | [optional] [default to null]
+**CaseInsensitive** | **bool** | True if the case is ignored for file names. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] [default to null]
+**CasePreserving** | **bool** | True if the case is preserved for file names. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] [default to null]
+**ChownRestricted** | **bool** | True if the superuser can change file ownership. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] [default to null]
+**CommitAsynchronous** | **bool** | True if NFS  commit  requests execute asynchronously. | [optional] [default to null]
+**DirectoryTransferSize** | **int32** | Specifies the preferred size for directory read operations. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**Encoding** | **string** | Specifies the default character set encoding of the clients connecting to the export, unless otherwise specified. | [optional] [default to null]
+**LinkMax** | **int32** | Specifies the reported maximum number of links to a file. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] [default to null]
+**MapAll** | [***NfsSettingsExportSettingsMapAll**](NfsSettingsExportSettingsMapAll.md) | User and group mapping. | [optional] [default to null]
+**MapFailure** | [***NfsSettingsExportSettingsMapAll**](NfsSettingsExportSettingsMapAll.md) | User and group mapping. | [optional] [default to null]
+**MapFull** | **bool** | True if user mappings query the OneFS user database. When set to false, user mappings only query local authentication. | [optional] [default to null]
+**MapLookupUid** | **bool** | True if incoming user IDs (UIDs) are mapped to users in the OneFS user database. When set to false, incoming UIDs are applied directly to file operations. | [optional] [default to null]
+**MapNonRoot** | [***NfsSettingsExportSettingsMapAll**](NfsSettingsExportSettingsMapAll.md) | User and group mapping. | [optional] [default to null]
+**MapRetry** | **bool** | Determines whether searches for users specified in &#39;map_all&#39;, &#39;map_root&#39; or &#39;map_nonroot&#39; are retried if the search fails. | [optional] [default to null]
+**MapRoot** | [***NfsSettingsExportSettingsMapAll**](NfsSettingsExportSettingsMapAll.md) | User and group mapping. | [optional] [default to null]
+**MaxFileSize** | **int32** | Specifies the maximum file size for any file accessed from the export. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] [default to null]
+**NameMaxSize** | **int32** | Specifies the reported maximum length of a file name. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] [default to null]
+**NoTruncate** | **bool** | True if long file names result in an error. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] [default to null]
+**ReadOnly** | **bool** | True if the export is set to read-only. | [optional] [default to null]
+**ReadTransferMaxSize** | **int32** | Specifies the maximum buffer size that clients should use on NFS read requests. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**ReadTransferMultiple** | **int32** | Specifies the preferred multiple size for NFS read requests. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**ReadTransferSize** | **int32** | Specifies the preferred size for NFS read requests. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**Readdirplus** | **bool** | True if &#39;readdirplus&#39; requests are enabled. Enabling this property might improve network performance and is only available for NFSv3. | [optional] [default to null]
+**ReaddirplusPrefetch** | **int32** | Sets the number of directory entries that are prefetched when a &#39;readdirplus&#39; request is processed. (Deprecated.) | [optional] [default to null]
+**Return32bitFileIds** | **bool** | Limits the size of file identifiers returned by NFSv3+ to 32-bit values (may require remount). | [optional] [default to null]
+**SecurityFlavors** | **[]string** | Specifies the authentication types that are supported for this export. | [optional] [default to null]
+**SetattrAsynchronous** | **bool** | True if set attribute operations execute asynchronously. | [optional] [default to null]
+**Snapshot** | **string** | Specifies the snapshot for all mounts. | [optional] [default to null]
+**Symlinks** | **bool** | True if symlinks are supported. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**TimeDelta** | **float32** | Specifies the resolution of all time values that are returned to the clients | [optional] [default to null]
+**WriteDatasyncAction** | **string** | Specifies the synchronization type. | [optional] [default to null]
+**WriteDatasyncReply** | **string** | Specifies the synchronization type. | [optional] [default to null]
+**WriteFilesyncAction** | **string** | Specifies the synchronization type. | [optional] [default to null]
+**WriteFilesyncReply** | **string** | Specifies the synchronization type. | [optional] [default to null]
+**WriteTransferMaxSize** | **int32** | Specifies the maximum buffer size that clients should use on NFS write requests. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**WriteTransferMultiple** | **int32** | Specifies the preferred multiple size for NFS write requests. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**WriteTransferSize** | **int32** | Specifies the preferred multiple size for NFS write requests. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] [default to null]
+**WriteUnstableAction** | **string** | Specifies the synchronization type. | [optional] [default to null]
+**WriteUnstableReply** | **string** | Specifies the synchronization type. | [optional] [default to null]
+**Zone** | **string** | Specifies the zone in which the export is valid. | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
